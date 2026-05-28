@@ -1,11 +1,11 @@
 import pytest
 import sys
 from pathlib import Path
+from main import saudacao, calcular_media
 
 # Add the parent directory to the path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from main import saudacao, calcular_media
 
 class TestSaudacao:
     def test_saudacao_nome_valido(self):
@@ -15,6 +15,7 @@ class TestSaudacao:
     def test_saudacao_tipo_invalido(self):
         with pytest.raises(TypeError):
             saudacao(123)
+
 
 class TestCalcularMedia:
     def test_media_simples(self):
