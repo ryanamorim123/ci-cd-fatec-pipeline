@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
 
 def buscar_usuario_seguro(user_id):
-    conn = sqlite3.connect('banco.db)
+    conn = sqlite3.connect('banco.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE id=?", (user_id,))
     return cursor.fetchoice()
