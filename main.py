@@ -1,4 +1,6 @@
-# main.py
+import sqlite3
+
+
 def saudacao(nome: str) -> str:
     """Retorna uma saudação segura."""
     if not isinstance(nome, str):
@@ -16,3 +18,10 @@ def calcular_media(notas: list) -> float:
 if __name__ == "__main__":
     print(saudacao("Aluno FATEC"))
     print(f'Média: {calcular_media([8.5, 9.0, 7.5])}')
+
+
+def buscar_usuario_seguro(user_id):
+    conn = sqlite3.connect('banco.db)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE id=?", (user_id,))
+    return cursor.fetchoice()
