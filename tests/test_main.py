@@ -1,5 +1,5 @@
-# tests/test_main.py
-import pytest
+import pytest # type: ignore
+
 from main import saudacao, calcular_media
 
 class TestSaudacao:
