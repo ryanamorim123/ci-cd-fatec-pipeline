@@ -2,7 +2,6 @@
 import pytest
 from main import saudacao, calcular_media
 
-
 class TestSaudacao:
     def test_saudacao_nome_valido(self):
         resultado = saudacao("Maria")
@@ -11,7 +10,6 @@ class TestSaudacao:
     def test_saudacao_tipo_invalido(self):
         with pytest.raises(TypeError):
             saudacao(123)
-
 
 class TestCalcularMedia:
     def test_media_simples(self):
